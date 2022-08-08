@@ -7,3 +7,5 @@ const NewBoxForm = () => {
         </div>
     )
 }
+
+export default NewBoxForm;
