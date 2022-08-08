@@ -1,9 +1,12 @@
 import React from "react";
 
-const Box = ({id, backgroundColor, width, height}) => {
+const Box = ({id, remove, backgroundColor, width, height}) => {
     return (
-    <div style={{backgroundColor, width, height}}>
+    <>
+    <div id={id} style={{backgroundColor, width, height}}>
     </div>
+    <button onClick={() => remove(id)}>X</button>
+    </>
     )
 }
 

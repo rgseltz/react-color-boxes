@@ -8,11 +8,30 @@ const BoxList = () => {
     const addBox = (newBox) => {
         setBoxes(boxes => ([...boxes, {...newBox, id:uuid()}]))
     }
+    const removeBox = (box) => {
+        setBoxes(boxes.filter(b => b.id !== box))
+    }
+
+    const handleRemove = (evt) => {
+        evt.preventDefault();
+        console.log(evt);
+
+    }
     return (
         <div>
             <h1>Box List!</h1>
             <ul>
-            {boxes.map(({id, backgroundColor, width, height}) => <li key={id}><Box id={id} backgroundColor={backgroundColor} width={width} height={height}/></li>)}
+            {boxes.map(({id, backgroundColor, width, height}) => 
+            <li key={id}>
+                
+                <Box 
+                    id={id} 
+                    backgroundColor={backgroundColor} 
+                    width={width} 
+                    height={height}
+                    remove={removeBox}
+                    />
+            </li>)}
             </ul>
             <NewBoxForm addBox={addBox}/>
         </div>
