@@ -1,6 +1,6 @@
 import React from "react";
 
-const Box = ({backgroundColor, width, height}) => {
+const Box = ({id, backgroundColor, width, height}) => {
     return (
     <div style={{backgroundColor, width, height}}>
     </div>

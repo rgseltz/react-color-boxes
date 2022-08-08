@@ -1,6 +1,5 @@
 import React from 'react';
 import BoxList from './BoxList'
-import NewBoxForm from './NewBoxForm'
 import './App.css';
 
 function App() {
