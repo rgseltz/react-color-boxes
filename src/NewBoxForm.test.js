@@ -5,3 +5,8 @@ import NewBoxForm from './NewBoxForm';
 it('does not crash', () => {
     render(<NewBoxForm/>)
 })
+
+it('matches snapshot', () => {
+    const {asFragment} = render(<NewBoxForm/>);
+    expect(asFragment()).toMatchSnapshot();
+})
